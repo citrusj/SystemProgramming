@@ -1,0 +1,15 @@
+OBJECTS = 20170123.o
+SRCS = 20170123.c
+
+CC=gcc
+CFLAGS = -g -c -Wall
+TARGET = 20170123.out
+
+$(TARGET) : $(OBJECTS) 20170123.h
+	$(CC) -o $(TARGET) $(OBJECTS)
+clean:
+	rm -rf $(OBJECTS) $(TARGET)
+
+20170123.o : 20170123.h 20170123.c
+
+
